@@ -2,6 +2,8 @@ package math.problems;
 
 public class PrimeNumber {
 
+
+
 	public static void main(String[] args) {
 		/*
 		 * Find list of Prime numbers from number 2 to 1 million.
