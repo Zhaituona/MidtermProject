@@ -1,25 +1,54 @@
 Please answer the below core-java Questions:
 
 What is programing language?
-A.
+A.The Programing language is we use object class to represent .
 What jdk contains or composed of and define each components?
-A.
+A.Jdk is java development kid ,The Runtime Interpreter.
+                               The Compiler.
+                               The Applet Viewer.
+                               The Debugger.
+                               The Class File Disassembler.
+                               The Header and Stub File Generator.
+                               The Documentation Generator.
+                               Applet Demos.
 What is IDE?
-A.
+A.IDE is integtrated development enviroment, you can use IDE to write and test the software .
 What are the IDEs available in the market to support java?
+Eclipse, Intellij and netBeans.
 Explain the entire java life cycle.
+A.Editing the program
+Compiling the source code
+Executing the byte code
 what is class?
+A. Class is a blue print of an object.
 What is object?
+A.Object is a instance of a class.
 What is the entry point of an application?
+A.the entry point of java application is main method .
 Why main is static?
+A.The main method is a entry point of a java program , cause the static method can be called without creating an object ,main method will be started without an object .
 Which class is the superclass of all classes?
+A.Object is a super class of nay class.
 What is difference between path and classpath variables?
+A.Classpath is the path for Java application where the classes you compiled will be available.PATH is an environment variable which is used to locate JDK binaries like "java" or "javac" command used to run java program and compile java source file.
 What is the difference between an Interface and Abstract class?
+A.Interface can only declare an method , not able to implement method , Abstract class you can declare a abstract method and implement non abstract method .
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
+A.No you can make an object from Interface or an Abstract class , because in there have some non implemented method , we cannot do that , you just need to create as Interface or Abstract class type object , then use .
 what is Access Specifier?
+A.Access Specifier  is a defining code element that can determine which elements of a program are allowed to access a specific variable or other piece of data.
 What is OOP ? Define each feature of java OOP.
+A. OOP is object oriented programming , there is Encapsulation , Abstraction , Inheritance , Polymorphism .
+Encapsulation is a data hiding .
+Abstraction we can declare a abstract class then
+Inheritance This is a special feature of Object Oriented Programming in Java. It lets programmers create new classes that share some of the attributes of existing classes. This lets us build on previous work without reinventing the wheel.
+Polymorphism is implementation hiding .This Java OOP concept lets programmers use the same word to mean different things in different contexts. One form of polymorphism in Java is method overloading. That’s when different meanings are implied by the code itself. The other form is method overriding. That’s when the different meanings are implied by the values of the supplied variables.
+
 What is Java Package and which package is imported by default?
+A. A Java package organizes Java classes into namespaces, providing a unique namespace for each type it contains, Java lang package is imported by default .
+
 What is API? Name list of API that you have used so far.
+A.
 Does java support multiple inheritance, explain why or why not?
 What is method overloading and when it happens?
 Explain exceptions in java and how to handle it.
