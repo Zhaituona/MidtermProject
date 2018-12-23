@@ -5,6 +5,8 @@ package math.problems;
  */
 public class FindMissingNumber {
 
+
+
     public static void main(String[] args) {
         /*
          * If n = 10, then array will have 9 elements in the range from 1 to 10.
@@ -13,5 +15,23 @@ public class FindMissingNumber {
          */
          int [] array = new int[]{10, 2, 1, 4, 5, 3, 7, 8, 6};
 
+        int sum = 0;
+        for (int i =0;i<array.length; i++){// take the length ,
+            sum= sum +array[i];
+        }
+        System.out.println(sum);
+
+        int total = 0;// have to take all ,cause one is missing
+        for(int j = 0; j<= 10;j++) {// it will take all of them
+            //(int j =-1; j<=10; j++)// the smallest one start from -1 ,
+            total = total + j;
+        }
+        System.out.println("*****************");
+        System.out.println(total);
+        System.out.println("Missing number is : "  + (total -sum));
     }
 }
+
+
+
+
