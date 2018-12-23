@@ -12,7 +12,20 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+		// using nesed loop
+		for (int i = 2; i <= 1000000; i++) {
+			for (int j = 2; j <= i; j++) {
+				if (j == i) {
+					System.out.println(i);
+				}
+				if (j % i == 0) {
+					break;
+				}
+
+			}
+
+
+		}
 
 	}
-
 }
