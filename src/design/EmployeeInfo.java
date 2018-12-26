@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo extends Worker implements Employee {
+public class EmployeeInfo extends Person implements Employee {
 	
  /* This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -62,9 +62,21 @@ public class EmployeeInfo extends Worker implements Employee {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
+	public double calculateEmployeeBonus(){
 
-		int total=0;
+		double performence = 0;
+		if(year>= 10){
+			performence = .20;
+		}
+		else if(year< 10 && year >= 5){
+			performence= .10;
+		}else if(year <5 && year >= 1){
+			performence = .05;
+		}else{
+			System.out.println("Sorry , Bounes are only for employees that have woked more that a year");
+		}
+		double total = (Salary * performence);
+		System.out.println("Bouns : " + total);
 		return total;
 	}
 	
@@ -74,7 +86,7 @@ public class EmployeeInfo extends Worker implements Employee {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
+	public  int calculateEmployeePension(){
 		int total=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
@@ -86,38 +98,50 @@ public class EmployeeInfo extends Worker implements Employee {
 
         //implement numbers of year from above two dates
 		//Calculate pension
+		try{
+			this.year= Integer.parseInt(convertedTodaysDate.substring(convertedTodaysDate.indexOf('/')) + 1, convertedJoiningDate.indexOf('/'));
+			if(this.year <1){
+				System.out.println("Sorry Pension are only for employees that have worked more that a year only");
+				return 0;
+			}
+		}catch(Exception e){
+			System.out.println("there is an error , try agian");
+		}
 
 		return total;
 	}
 
 	@Override
 	public int employeeId() {
-		return 0;
+		return this.id;
 	}
 
 	@Override
 	public String employeeName() {
-		return null;
+		return this.name;
 	}
 
-	@Override
-	public void assignDepartment() {
+
+	public void assignDepartment(String d) {
+		this.dep = d;
 
 	}
 
 	@Override
 	public int calculateSalary() {
-		return 0;
+		return this.Salary;
 	}
 
 	@Override
 	public void benefitLayout() {
+		System.out.println("Empoyees has dental ,medical ,Stock ,401K");
 
 	}
 
 	@Override
 	public double groceryBudget() {
-		return 0;
+		System.out.println("My yearly bill is " + (double)(this.Salary* .05)+ "Dollars");
+		return this.Salary * .05;
 	}
 
 	private static class DateConversion {

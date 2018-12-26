@@ -1,6 +1,6 @@
 package design;
 
-public abstract class Worker {
+public abstract class Person {
 
     public double getHeight() {
         return height;
@@ -23,11 +23,11 @@ public abstract class Worker {
     private String ethnicity;
     public static final String species = "HardWorker";
 
-    public Worker(double height, String ethnicity){
+    public Person(double height, String ethnicity){
         this.height= height;
         this.ethnicity = ethnicity;
     }
-    public Worker(){
+    public Person(){
 
     }
     public String job(){
